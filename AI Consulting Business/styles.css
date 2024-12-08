@@ -1,0 +1,1777 @@
+:root {
+    --primary-color: #2c1e4a;
+    --accent-color: #d73cbe;
+    --background-color: #f2f2f2;
+    --text-color: #ffffff;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    line-height: 1.6;
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex; /* Align logo and nav links in a row */
+    align-items: center; /* Vertically align items */
+    justify-content: space-between; /* Space between logo and nav links */
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+}
+
+/* Logo Styling */
+.logo {
+    height: 75px; /* Adjust height for appropriate size */
+    width: auto; /* Maintain the aspect ratio */
+    margin-right: auto; /* Push the nav links to the right */
+}
+
+/* Navigation Links */
+.nav-list {
+    list-style-type: none;
+    display: flex; /* Display links in a row */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 10px 25px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+}
+/* Contact Form Section */
+/* Centering the Send Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Add spacing above the button */
+}
+#custom-contact-form {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#custom-contact-form input,
+#custom-contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#custom-contact-form button {
+    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+#custom-contact-form button:hover {
+    background-color: #c030a8;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 50px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content {
+    text-align: center; /* Already centers the text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the button horizontally */
+    justify-content: center; /* Centers content vertically if needed */
+    min-height: 300px; /* Adjust height as needed */
+}
+
+/* Call-to-Action Buttons */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px; /* Add spacing between buttons */
+}
+
+.cta-button:hover {
+    background-color: #c030a8;
+}
+
+/* Secondary Button Styling */
+.secondary-button {
+    background-color: var(--primary-color);
+    border: 2px solid var(--accent-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+.feature img,
+.service img {
+    max-width: 300px; /* Limit width for specific sections */
+    margin-bottom: 15px; /* Add spacing below images */
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Center images */
+}
+
+/* Features Section - Grid Layout */
+.features {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(2, 1fr); /* Create 2 columns of equal width */
+    gap: 20px; /* Space between grid items */
+    padding: 40px 20px;
+    text-align: center; /* Center-align content */
+}
+
+.feature {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+    transition: transform 0.3s ease; /* Optional: Add hover effect */
+}
+
+.feature h2 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Optional: Slight lift on hover */
+}
+
+/* Testimonials Section */
+.testimonials {
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 40px 20px;
+}
+
+.testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.testimonials .divider {
+    border: none;
+    border-top: 2px solid var(--primary-color);
+    margin: 20px auto 10px;
+    width: 50px; /* Keeps the divider subtle */
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 600px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-1675 {
+      padding: var(--sectionPadding);
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #steps-1675 .cs-container {
+      width: 100%;
+      /* changes to 1920px at tablet */
+      max-width: 36.5rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #steps-1675 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    #steps-1675 .cs-text {
+      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+      max-width: 32.625rem;
+    }
+    #steps-1675 .cs-card-group {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      justify-items: center;
+      align-items: stretch;
+      grid-auto-flow: row;
+    }
+    #steps-1675 .cs-item {
+      list-style: none;
+      /* prevents padding and border from affecting height and width */
+      box-sizing: border-box;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      /* bottom border */
+    }
+    #steps-1675 .cs-item::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      /* to change the color of the bottom border, adjust the second color (at 50%). the first and third will blend the color to transparent */
+      /* note you'll also have to change the color in the tablet media query when the lines go vertical */
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: .6;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+    #steps-1675 .cs-item:first-of-type {
+      padding-top: 0;
+    }
+    #steps-1675 .cs-item:last-of-type {
+      padding-bottom: 0;
+    }
+    #steps-1675 .cs-item:last-of-type::after {
+      content: none;
+    }
+    #steps-1675 .cs-number {
+      /* 80px - 100px */
+      font-size: clamp(5rem, 1vw, 6.25rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      color: var(--primary);
+      opacity: 0.12;
+      display: block;
+    }
+    #steps-1675 .cs-h3 {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 2vw, 1.5625rem);
+      font-weight: 700;
+      line-height: 1.2em;
+      margin: -1.9375rem 0 1rem 0;
+      color: var(--headerColor);
+    }
+    #steps-1675 .cs-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      line-height: 1.5em;
+      text-align: left;
+      margin: 0;
+      color: var(--bodyTextColor);
+    }
+  }
+  /* Tablet - 768px */
+  @media only screen and (min-width: 48rem) {
+    #steps-1675 .cs-container {
+      max-width: 120rem;
+    }
+    #steps-1675 .cs-card-group {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+    }
+    #steps-1675 .cs-item {
+      /* 24px - 60px */
+      padding: clamp(1.5rem, 3vw, 3.75rem);
+      /* the specificity of the mobile .cs-item means we need to explicitly define the first and last items here, too */
+    }
+    #steps-1675 .cs-item::after {
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, #bababa 50%, rgba(255, 255, 255, 0) 100%);
+      opacity: .6;
+      right: 0;
+      left: initial;
+    }
+    #steps-1675 .cs-item:first-of-type,
+    #steps-1675 .cs-item:last-of-type {
+      /* 24px - 60px */
+      padding: clamp(1.5rem, 3vw, 3.75rem);
+    }
+  }
+
+  :root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-37 {
+        position: relative;
+        /* Prevents overflow from the image going off screen */
+        overflow: hidden;
+    }
+    #why-choose-37 .cs-container {
+        width: 100%;
+        max-width: 80rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 7vw, 4rem);
+    }
+    #why-choose-37 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 39.375rem;
+        margin-right: auto;
+        /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+        padding: var(--sectionPadding);
+        padding-top: 0;
+        /* prevents padding from affecting width and height */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+    #why-choose-37 .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    #why-choose-37 .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    #why-choose-37 .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    #why-choose-37 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #why-choose-37 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #why-choose-37 .cs-ul {
+        padding: 0;
+        margin: 0;
+    }
+    #why-choose-37 .cs-li {
+        list-style: none;
+        font-size: 1.25rem;
+        line-height: 1.5em;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #1a1a1a;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    #why-choose-37 .cs-icon {
+        margin-right: 1rem;
+    }
+    #why-choose-37 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #why-choose-37 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #why-choose-37 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #why-choose-37 .cs-button-solid {
+        /* button override */
+        margin-top: 2rem;
+    }
+    #why-choose-37 .cs-picture {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 18.75rem;
+    }
+    #why-choose-37 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+    }
+}
+/* In Between - 650px */
+@media only screen and (min-width: 40.625rem) {
+    #why-choose-37 .cs-ul {
+        columns: 2;
+        max-width: 34.375rem;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-37 {
+        /* moved padding pack to the section container */
+        padding: var(--sectionPadding);
+    }
+    #why-choose-37 .cs-content {
+        width: 60%;
+        padding: 0;
+    }
+    #why-choose-37 .cs-picture {
+        height: 100%;
+        width: 50%;
+        left: 50%;
+        right: auto;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+    #why-choose-37 .cs-picture:before {
+        /* Triangle over image */
+        content: "";
+        width: 21.875rem;
+        background: #fff;
+        /* makes the triangle shape over the image */
+        clip-path: polygon(0 0, 73% 0, 42% 100%, 0 100%);
+        opacity: 1;
+        display: block;
+        position: absolute;
+        top: -0.125rem;
+        bottom: -0.125rem;
+        left: -0.125rem;
+        right: auto;
+        z-index: 10;
+    }
+    #why-choose-37 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+/* Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #why-choose-37 .cs-picture:before {
+        width: 18.75rem;
+        -webkit-clip-path: polygon(0 0, 100% 0, 14% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 14% 100%, 0 100%);
+    }
+}
+
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #table-1669 {
+      padding: var(--sectionPadding);
+    }
+    #table-1669 .cs-container {
+      width: 100%;
+      max-width: 80rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #table-1669 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
+    #table-1669 .cs-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    #table-1669 .cs-th {
+      padding: 0.75rem 1rem;
+      box-sizing: border-box;
+    }
+    #table-1669 .cs-td {
+      padding: 0.5rem 1rem;
+      box-sizing: border-box;
+    }
+    #table-1669 .cs-th,
+    #table-1669 .cs-td {
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+    #table-1669 .cs-color .cs-th:first-child {
+      color: #fff;
+      background-color: var(--primary);
+    }
+    #table-1669 .cs-th:first-child,
+    #table-1669 .cs-td:first-child {
+      position: sticky;
+      left: 0;
+      z-index: 100;
+      /* Make sure it sits above the other cells */
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+    #table-1669 .cs-th {
+      background-color: #f2f2f2;
+    }
+    #table-1669 .cs-tr {
+      color: var(--bodyTextColor);
+    }
+    #table-1669 .cs-icon {
+      height: 1rem;
+      width: auto;
+    }
+  }
+  /* Tablet - 600px */
+  @media screen and (max-width: 37.5rem) {
+    #table-1669 .cs-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+                                  
+  :root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+                            /*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #contact-1333 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+    }
+    #contact-1333 .cs-container {
+        width: 100%; /* Set to full width */
+        max-width: 1200px; /* Adjust based on your desired maximum container width */
+        margin: 0 auto; /* Center the container horizontally */
+        display: flex;
+        justify-content: space-between; /* Space between Send a Message and FAQ */
+        align-items: stretch; /* Ensure both sections align properly */
+        flex-direction: row; /* Arrange sections side-by-side */
+        gap: 2rem; /* Add space between the sections */
+        position: relative;
+    }
+    
+    /* Send a Message Section */
+    #contact-1333 .cs-form {
+        flex: 1.5; /* Allocate more space to Send a Message */
+        max-width: 60%; /* Limit the width for responsiveness */
+    }
+    
+    /* FAQ Section */
+    #contact-1333 .cs-content {
+        flex: 1; /* Allocate less space to FAQ */
+        text-align: left; /* Keep FAQ text aligned to the left */
+        max-width: 40%; /* Ensure it doesn’t exceed a reasonable size */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+
+    #contact-1333 .cs-title {
+        max-width: 23ch;
+        margin: 0 0 1.75rem 0;
+    }
+
+    #contact-1333 .cs-form .cs-title {
+        /* 16px - 28px */
+        margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+    }
+    #contact-1333 .cs-label {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        width: 100%;
+        color: var(--headerColor);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    #contact-1333 .cs-input {
+        font-size: 1rem;
+        width: 100%;
+        height: 3.5rem;
+        padding: 0;
+        padding-left: 1.5rem;
+        color: var(--headerColor);
+        background-color: #fff;
+        border: none;
+        /* prevents padding from adding to height and width */
+        box-sizing: border-box;
+    }
+    #contact-1333 .cs-input::placeholder {
+        color: #767676;
+        opacity: 0.6;
+    }
+    #contact-1333 .cs-textarea {
+        min-height: 7.5rem;
+        padding-top: 1.5rem;
+        /* 16px - 28px */
+        margin: 0 0 clamp(1rem, 3vw, 1.75rem) 0;
+        font-family: inherit;
+    }
+    #contact-1333 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #1a1a1a;
+        border: none;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+        transition: color 0.3s;
+    }
+    #contact-1333 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: width 0.3s;
+    }
+    #contact-1333 .cs-button-solid:hover {
+        color: #fff;
+    }
+    #contact-1333 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #contact-1333 .cs-submit {
+        width: 100%;
+        min-width: 17.6875rem;
+    }
+    #contact-1333 .cs-submit:hover {
+        cursor: pointer;
+    }
+    #contact-1333 .cs-faq-group {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #contact-1333 .cs-faq-item {
+        list-style: none;
+        width: 100%;
+        border-bottom: 1px solid #e8e8e8;
+        transition: border-bottom 0.3s;
+    }
+    #contact-1333 .cs-faq-item.active {
+        border-color: var(--primary);
+    }
+    #contact-1333 .cs-faq-item.active .cs-button {
+        color: var(--primary);
+    }
+    #contact-1333 .cs-faq-item.active .cs-button:before {
+        background-color: var(--primary);
+        transform: rotate(315deg);
+    }
+    #contact-1333 .cs-faq-item.active .cs-button:after {
+        background-color: var(--primary);
+        transform: rotate(-315deg);
+    }
+    #contact-1333 .cs-faq-item.active .cs-item-p {
+        height: auto;
+        /* 20px - 24px bottom */
+        /* 16px - 24px left & right */
+        padding: 0 clamp(1rem, 2vw, 1.5rem) clamp(1.25rem, 2vw, 1.5rem) 0;
+        opacity: 1;
+    }
+    #contact-1333 .cs-button {
+        font-size: 1rem;
+        line-height: 1.2em;
+        text-align: left;
+        font-weight: bold;
+        /* 16px - 24px */
+        padding: clamp(1rem, 2vw, 1.5rem);
+        padding-left: 0;
+        border: none;
+        background: transparent;
+        color: var(--headerColor);
+        display: block;
+        width: 100%;
+        position: relative;
+        transition:
+            background-color 0.3s,
+            color 0.3s;
+    }
+    #contact-1333 .cs-button:hover {
+        cursor: pointer;
+    }
+    #contact-1333 .cs-button:before {
+        /* left line */
+        content: "";
+        width: 0.5rem;
+        height: 0.125rem;
+        background-color: var(--headerColor);
+        opacity: 1;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        top: 45%;
+        right: 1.5rem;
+        transform: rotate(45deg);
+        /* animate the transform from the left side of the x axis, and the center of the y */
+        transform-origin: left center;
+        transition: transform 0.5s;
+    }
+    #contact-1333 .cs-button:after {
+        /* right line */
+        content: "";
+        width: 0.5rem;
+        height: 0.125rem;
+        background-color: var(--headerColor);
+        opacity: 1;
+        border-radius: 50%;
+        position: absolute;
+        display: block;
+        top: 45%;
+        right: 1.3125rem;
+        transform: rotate(-45deg);
+        /* animate the transform from the right side of the x axis, and the center of the y */
+        transform-origin: right center;
+        transition: transform 0.5s;
+    }
+    #contact-1333 .cs-button-text {
+        width: 80%;
+        display: block;
+    }
+    #contact-1333 .cs-item-p {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        line-height: 1.5em;
+        width: 90%;
+        height: 0;
+        margin: 0;
+        /* 16px - 24px */
+        padding: 0 clamp(1rem, 2vw, 1.5rem);
+        opacity: 0;
+        color: var(--bodyTextColor);
+        /* clips the text so it doesn't show up */
+        overflow: hidden;
+        transition:
+            opacity 0.3s,
+            padding-bottom 0.3s;
+    }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #contact-1333 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #contact-1333 .cs-form {
+        width: 45vw;
+    }
+    #contact-1333 .cs-submit {
+        width: auto;
+    }
+}
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+                            
+                                /*-- -------------------------- -->
+<---       Meet The Team        -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #meet-team-977 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+    }
+    #meet-team-977 .cs-container {
+        width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #meet-team-977 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        max-width: 40.625rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+    }
+    #meet-team-977 .cs-topper {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+    #meet-team-977 .cs-title {
+        font-size: var(--headerFontSize);
+        font-weight: 900;
+        line-height: 1.2em;
+        text-align: inherit;
+        max-width: 43.75rem;
+        margin: 0 0 1rem 0;
+        color: var(--headerColor);
+        position: relative;
+    }
+    #meet-team-977 .cs-text {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        text-align: inherit;
+        width: 100%;
+        max-width: 40.625rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    #meet-team-977 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    #meet-team-977 .cs-item {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+    }
+    #meet-team-977 .cs-item:hover {
+        cursor: pointer;
+    }
+    #meet-team-977 .cs-item:hover .cs-picture:before,
+    #meet-team-977 .cs-item:hover .cs-picture:after {
+        opacity: 1;
+    }
+    #meet-team-977 .cs-item:hover .cs-picture img {
+        transform: scale(1.1);
+    }
+    #meet-team-977 .cs-picture {
+        width: 100%;
+        height: 25rem;
+        /* removed at tablet */
+        aspect-ratio: 0.82;
+        /* clips img tag from overflowing it on hover */
+        overflow: hidden;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+    #meet-team-977 .cs-picture img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+        object-position: top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: transform 0.7s;
+    }
+    #meet-team-977 .cs-info {
+        width: 90%;
+        max-width: 15rem;
+        padding: 1.5rem;
+        /* prevents padding from affecting the height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+    #meet-team-977 .cs-info:before {
+        /* background-color */
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #1a1a1a;
+        opacity: 0.8;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition:
+            background-color 0.3s,
+            opacity 0.3s;
+    }
+    #meet-team-977 .cs-name {
+        /* 20px - 25px */
+        font-size: 1.25rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: #fff;
+        display: block;
+    }
+    #meet-team-977 .cs-job {
+        font-size: 1rem;
+        line-height: 1.5em;
+        margin: 0;
+        color: #fff;
+        display: block;
+    }
+    #meet-team-977 .cs-social-group {
+        margin: 0.5rem 0 0 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    #meet-team-977 .cs-link {
+        width: 2rem;
+        height: 2rem;
+        background-color: #e8e8e8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #meet-team-977 .cs-link:hover .cs-icon {
+        filter: grayscale(0);
+        transform: translateY(-0.25rem);
+    }
+    #meet-team-977 .cs-icon {
+        width: 0.75rem;
+        height: auto;
+        filter: grayscale(1);
+        transition:
+            filter 0.3s,
+            transform 0.3s;
+        z-index: 10;
+    }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+    #meet-team-977 .cs-card-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+    #meet-team-977 .cs-item {
+        width: 50%;
+    }
+    #meet-team-977 .cs-picture {
+        /* remove the aspect ratio so the height can be squished */
+        aspect-ratio: initial;
+    }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #meet-team-977 .cs-container {
+        max-width: 80rem;
+    }
+    #meet-team-977 .cs-item {
+        width: 25%;
+    }
+    #meet-team-977 .cs-item:hover .cs-info:before {
+        background-color: var(--primary);
+        opacity: 1;
+    }
+    #meet-team-977 .cs-item:hover .cs-social-group {
+        height: 2rem;
+        margin-top: 0.5rem;
+    }
+    #meet-team-977 .cs-item:hover .cs-link {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    #meet-team-977 .cs-social-group {
+        height: 0;
+        margin-top: 0;
+        transition:
+            height 0.3s,
+            marign-top 0.3s;
+    }
+    #meet-team-977 .cs-link {
+        opacity: 0;
+        transform: translateX(-0.5rem);
+        transition:
+            opacity 0.6s,
+            transform 0.4s;
+    }
+    #meet-team-977 .cs-link:nth-of-type(2) {
+        transition-delay: 0.1s;
+    }
+    #meet-team-977 .cs-link:nth-of-type(3) {
+        transition-delay: 0.2s;
+    }
+    #meet-team-977 .cs-link:nth-of-type(4) {
+        transition-delay: 0.3s;
+    }
+}
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+                            
+                                /*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #pricing-1087 {
+        padding: var(--sectionPadding);
+        background-color: #f7f8f8;
+        position: relative;
+    }
+    #pricing-1087 .cs-container {
+        width: 100%;
+        max-width: 80em;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+        position: relative;
+    }
+    #pricing-1087 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    #pricing-1087 .cs-card-group {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 16px - 20px */
+        gap: clamp(1rem, 1.8vw, 1.25rem);
+        position: relative;
+        z-index: 10;
+    }
+    #pricing-1087 .cs-item {
+        text-align: left;
+        list-style: none;
+        width: 100%;
+        max-width: 31.25rem;
+        margin: 0;
+        /* 20px - 40px top *
+            /* 16px - 32px left & right */
+        padding: clamp(1.25rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2rem);
+        background-color: #fff;
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+    }
+    #pricing-1087 .cs-item.cs-popular {
+        background-color: #1a1a1a;
+    }
+    #pricing-1087 .cs-item.cs-popular:before {
+        content: "Popular";
+        text-transform: uppercase;
+        font-size: 0.8125rem;
+        font-weight: 700;
+        line-height: 1.2em;
+        letter-spacing: 0.01em;
+        padding: 0.5rem 1.25rem;
+        background: var(--secondary);
+        color: var(--headerColor);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-package {
+        color: #888;
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-price,
+    #pricing-1087 .cs-item.cs-popular .cs-item-p,
+    #pricing-1087 .cs-item.cs-popular .cs-li {
+        color: var(--bodyTextColorWhite);
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-li.cs-disabled {
+        filter: grayscale(1) brightness(550%);
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-icon {
+        /* if icon is not black, this turns it white */
+        filter: grayscale(1) brightness(1000%);
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-button-solid {
+        transition: color 0.3s;
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-button-solid:hover {
+        color: var(--primary);
+    }
+    #pricing-1087 .cs-item.cs-popular .cs-button-solid:before {
+        background-color: #fff;
+    }
+    #pricing-1087 .cs-package {
+        /* 13px - 16px */
+        font-size: clamp(0.8125rem, 1.4vw, 1rem);
+        line-height: 1.2em;
+        text-align: inherit;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: #767676;
+        display: block;
+    }
+    #pricing-1087 .cs-price {
+        /* 31px - 49px */
+        font-size: var(--headerFontSize);
+        line-height: 1.2em;
+        text-align: inherit;
+        font-weight: 900;
+        margin: 0;
+        color: var(--headerColor);
+    }
+    #pricing-1087 .cs-item-p {
+        font-size: 1rem;
+        line-height: 1.5em;
+        text-align: inherit;
+        font-weight: 400;
+        /* 16px - 24px */
+        margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+        color: var(--bodyTextColor);
+    }
+    #pricing-1087 .cs-ul {
+        /* 32px - 48px */
+        margin: 1.5rem 0 0;
+        padding: 1.5rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+        position: relative;
+    }
+    #pricing-1087 .cs-ul:before {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            rgba(232, 232, 232, 0.2) 0%,
+            #e8e8e8 53.78%,
+            rgba(232, 232, 232, 0.2) 100%
+        );
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+    }
+    #pricing-1087 .cs-li {
+        /* 14px - 16px */
+        font-size: clamp(0.875rem, 1.5vw, 1rem);
+        list-style: none;
+        line-height: 1.2em;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: var(--bodyTextColor);
+        display: flex;
+        justify-content: space-between;
+        /* push everything to the top so if the li goes to two lines the icon stays at the top */
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    #pricing-1087 .cs-li.cs-disabled {
+        opacity: 0.5;
+    }
+    #pricing-1087 .cs-li.cs-disabled .cs-icon {
+        filter: grayscale(1) brightness(300%);
+    }
+    #pricing-1087 .cs-icon {
+        width: 1.125rem;
+        height: auto;
+        display: block;
+    }
+    #pricing-1087 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875em, 5.5vw, 3.5em);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #pricing-1087 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #pricing-1087 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #pricing-1087 .cs-price-button {
+        /* pushes up against the cs-ul so if there's loess li's in the list, the button always pushes itself to the bottom */
+        margin-top: auto;
+        width: 100%;
+        border-radius: 0;
+    }
+    #pricing-1087 .cs-price-button:before {
+        border-radius: 0;
+    }
+    #pricing-1087 .cs-floater {
+        /* 76PX - 121PX */
+        width: clamp(4.75rem, 7vw, 7.5625rem);
+        height: auto;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        pointer-events: none;
+    }
+    #pricing-1087 .cs-floater1 {
+        top: 0;
+        left: 0;
+    }
+    #pricing-1087 .cs-floater2 {
+        bottom: 0;
+        right: 0;
+    }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #pricing-1087 .cs-card-group {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+    }
+    #pricing-1087 .cs-option2 {
+        top: auto;
+        bottom: 0;
+    }
+}
+
+:root {
+    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+    --primary: #ff6a3e;
+    --primaryLight: #ffba43;
+    --secondary: #ffba43;
+    --secondaryLight: #ffba43;
+    --headerColor: #1a1a1a;
+    --bodyTextColor: #4e4b66;
+    --bodyTextColorWhite: #fafbfc;
+    /* 13px - 16px */
+    --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+    /* 31px - 49px */
+    --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
+    --bodyFontSize: 1rem;
+    /* 60px - 100px top and bottom */
+    --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+}
+.cs-topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+}
+
+.cs-title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+}
+
+.cs-text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+}
+.cs-textarea {
+    min-height: 7.5rem; /* Keeps the height comfortable */
+    padding: 1.5rem; /* Adds padding inside the textarea */
+    font-family: inherit; /* Ensures it matches the rest of the form's font */
+    width: 100%; /* Ensures it takes the full width of the parent */
+    box-sizing: border-box; /* Prevents padding from affecting width */
+    resize: vertical; /* Allows resizing vertically, but not horizontally */
+}
+
+.cs-form {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the form on the page */
+    padding: 2rem; /* Adds internal spacing */
+}

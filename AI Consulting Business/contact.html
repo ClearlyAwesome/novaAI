@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nova AI Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="AI TRY.png" alt="Nova AI Consulting Logo" class="logo">
+                </a>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="gallery.html">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Reach out for inquiries and collaborations.</p>
+        </div>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+        <form id="custom-contact-form">
+            <h1>Contact Us</h1>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <div class="button-container">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </section>
+    
+
+    <!-- Google Form Embedded, Hidden -->
+    <iframe id="google-form-iframe" name="google-form-iframe" style="display: none;"></iframe>
+
+    <script>
+        document.getElementById("custom-contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get custom form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // Create a hidden form to submit to Google Forms
+            const googleForm = document.createElement("form");
+            googleForm.action =
+                "https://docs.google.com/forms/d/e/1FAIpQLSf1lLM_00XNc_taCSpthaUMrs_AYesj5JXxnNHTRIq21oYuOw/formResponse";
+            googleForm.method = "POST";
+            googleForm.target = "google-form-iframe";
+
+            // Append hidden inputs with the data
+            googleForm.innerHTML = `
+                <input type="hidden" name="entry.2005620554" value="${name}">
+                <input type="hidden" name="entry.1045781291" value="${email}">
+                <input type="hidden" name="entry.839337160" value="${message}">
+            `;
+
+            document.body.appendChild(googleForm);
+            googleForm.submit();
+
+            // Optionally, display a thank-you message
+            alert("Thank you! Your message has been sent. Please allow 48 hours for a response.");
+            document.getElementById("custom-contact-form").reset();
+
+            // Remove the temporary form after submission
+            document.body.removeChild(googleForm);
+        });
+    </script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Nova AI Consulting. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* General Styles for All Pages */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+#hero {
+    background: #f4f4f4;
+    padding: 60px;
+    text-align: center;
+}
+
+.cta-button {
+    background: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contact Us Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input, form textarea, form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#gallery h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Art Item Block */
+.art-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    text-align: left;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.art-item:hover {
+    transform: translateY(-5px);
+}
+
+.art-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.art-details {
+    padding: 15px;
+}
+
+/* User name and rating */
+.user-name {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.user-name:hover {
+    text-decoration: underline;
+}
+
+.rating {
+    color: #ff9900;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+/* Price, Description, Tags, License */
+.price {
+    font-size: 1.2em;
+    color: #27ae60;
+    margin: 8px 0;
+}
+
+.description {
+    font-size: 0.95em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.tags {
+    font-size: 0.9em;
+    color: #777;
+    margin: 8px 0;
+}
+
+.license {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+    font-style: italic;
+}
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}

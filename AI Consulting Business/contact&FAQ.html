@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nova AI Consulting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="AI TRY.png" alt="Nova AI Consulting Logo" class="logo">
+                </a>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="gallery.html">Projects</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Reach out for inquiries and collaborations.</p>
+        </div>
+    </header>
+
+    <!-- Contact and FAQ Section -->
+    <section id="contact-1333">
+        <div class="cs-container">
+            <!-- Contact Form -->
+            <form id="custom-contact-form">
+                <div class="cs-content">
+                    <span class="cs-topper">Contact Us</span>
+                    <h2 class="cs-title">Send a Message</h2>
+                </div>
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name" name="name" placeholder="Your Name">
+                </label>
+                <label class="cs-label cs-email">
+                    Email
+                    <input class="cs-input" required type="email" id="email" name="email" placeholder="Your Email">
+                </label>
+                <label class="cs-label">
+                    Message
+                    <textarea class="cs-input cs-textarea" required id="message" name="message" placeholder="Your Message"></textarea>
+                </label>
+                <button class="cs-button-solid cs-submit" type="submit">Send</button>
+            </form>
+
+            <!-- FAQ Section -->
+            <div class="cs-content">
+                <span class="cs-topper">Asked Questions</span>
+                <h2 class="cs-title">Frequently Asked Questions</h2>
+                <ul class="cs-faq-group">
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I contact customer support?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            You can contact our customer support team by emailing support@novaai.com or calling us at (555) 123-4567. Our support hours are Monday to Friday, 9 AM to 5 PM EST.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Do you offer consultations for AI integration?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Yes, we offer free initial consultations to discuss how AI can help your business. Contact us to schedule an appointment.
+                        </p>
+                    </li>
+                </ul>                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Nova AI Consulting. All rights reserved.</p>
+    </footer>
+
+    <iframe id="google-form-iframe" name="google-form-iframe" style="display: none;"></iframe>
+
+    <script>
+        document.getElementById("custom-contact-form").addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            // Get custom form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+    
+            // Create a hidden form to submit to Google Forms
+            const googleForm = document.createElement("form");
+            googleForm.action =
+                "https://docs.google.com/forms/d/e/1FAIpQLSf1lLM_00XNc_taCSpthaUMrs_AYesj5JXxnNHTRIq21oYuOw/formResponse";
+            googleForm.method = "POST";
+            googleForm.target = "google-form-iframe"; // Ensures submission doesn't reload the page
+    
+            // Append hidden inputs with the data
+            googleForm.innerHTML = `
+                <input type="hidden" name="entry.2005620554" value="${name}">
+                <input type="hidden" name="entry.1045781291" value="${email}">
+                <input type="hidden" name="entry.839337160" value="${message}">
+            `;
+    
+            // Append the form to the body and submit it
+            document.body.appendChild(googleForm);
+            googleForm.submit();
+    
+            // Optionally, display a thank-you message
+            alert("Thank you! Your message has been sent. Please allow 48 hours for a response.");
+            document.getElementById("custom-contact-form").reset();
+    
+            // Remove the temporary form after submission
+            document.body.removeChild(googleForm);
+        });
+    </script>
+    
+</body>
+</html>

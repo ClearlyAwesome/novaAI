@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <h1>Click the Button Below</h1>
+    <button id="maliciousButton">Click Me!</button>
+    <div id="output" style="margin-top: 20px; border: 1px solid black; padding: 10px;"></div>
+    <script>
+        document.getElementById('maliciousButton').addEventListener('click', () => {
+            fetch('http://127.0.0.1:5000/click') // URL of your Flask server
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const outputDiv = document.getElementById('output');
+                    outputDiv.innerHTML = `
+                        <h2>Collected Information:</h2>
+                        <p><strong>Message:</strong> ${data.message}</p>
+                        <p><strong>IP Address:</strong> ${data.location_data.ip}</p>
+                        <p><strong>City:</strong> ${data.location_data.city}</p>
+                        <p><strong>Region:</strong> ${data.location_data.region}</p>
+                        <p><strong>Country:</strong> ${data.location_data.country}</p>
+                        <p><strong>Coordinates:</strong> ${data.location_data.loc}</p>
+                    `;
+                })
+                .catch(err => {
+                    const outputDiv = document.getElementById('output');
+                    outputDiv.innerHTML = `<p style="color: red;">Error: ${err.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
