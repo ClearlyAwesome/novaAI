@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Training Customer Survey</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 8px;
+            width: 300px;
+            text-align: center;
+        }
+        .modal button {
+            margin-top: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .modal button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>AI Training Customer Survey</h2>
+    <form id="survey-form" class="survey-form" action="/save-survey" method="POST">
+        <!-- Section 1: Company Overview -->
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" name="company_name" required>
+
+        <label for="industry">Primary Industry:</label>
+        <input type="text" id="industry" name="industry">
+
+        <label for="departments">Departments Participating in Training:</label>
+        <input type="text" id="departments" name="departments">
+
+        <label for="participants">Number of Participants:</label>
+        <input type="number" id="participants" name="participants">
+
+        <!-- Section 2: Current AI Knowledge -->
+        <label>How familiar is your organization with AI tools and concepts?</label>
+        <select name="ai_familiarity" required>
+            <option value="very-familiar">Very Familiar</option>
+            <option value="somewhat-familiar">Somewhat Familiar</option>
+            <option value="not-familiar">Not Familiar</option>
+        </select>
+
+        <label>What best describes your current use of AI?</label>
+        <select name="ai_usage" required>
+            <option value="regular-use">We use AI tools regularly</option>
+            <option value="experimenting">We’ve experimented with AI</option>
+            <option value="planning">We’re planning to implement AI</option>
+            <option value="no-experience">We have no experience with AI</option>
+        </select>
+
+        <!-- Section 3: Goals and Expectations -->
+        <label>What are your primary goals for this training?</label>
+        <textarea name="training_goals" placeholder="E.g., Increase team efficiency, automate tasks..."></textarea>
+
+        <label>Which areas of AI are most relevant to your organization?</label>
+        <textarea name="relevant_ai_areas" placeholder="E.g., Content generation, data analysis..."></textarea>
+
+        <!-- Section 4: Familiarity with AI Tools -->
+        <label>Which AI tools or models have you heard of or used?</label>
+        <textarea name="ai_tools_used" placeholder="E.g., ChatGPT, Claude, Bard, DALL-E..."></textarea>
+
+        <label>Which AI tools or models are you most interested in learning about?</label>
+        <textarea name="ai_tools_interest"></textarea>
+
+        <label>Which AI tools or models are you most interested in learning about?</label>
+        <select name="ai_tools_interest" required>
+            <option value="ChatGPT">ChatGPT</option>
+            <option value="Copilot">Microsoft Copilot</option>
+            <option value="Claude">Claude</option>
+            <option value="Google's Gemini">Gemini</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <!-- Section 5: Additional Information -->
+        <label>What challenges do you face when considering or implementing AI?</label>
+        <textarea name="ai_challenges"></textarea>
+
+        <label>Is there anything specific you’d like us to cover in the training?</label>
+        <textarea name="specific_requests"></textarea>
+
+        <button type="button" id="submit-button">Submit Survey</button>
+    </form>
+
+    <!-- Modal -->
+    <div id="completion-modal" class="modal">
+        <div class="modal-content">
+            <p>Thank you for completing the survey!</p>
+            <button onclick="window.close()">Close Window</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-button').addEventListener('click', function() {
+            // Show the modal
+            document.getElementById('completion-modal').style.display = 'block';
+        });
+    </script>
+    <script src="survey.js"></script>
+</body>
+</html>

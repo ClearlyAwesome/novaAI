@@ -1,130 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Pricing - Nova AI</title>
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-
+        .price {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        .business-size-section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .package-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .package-card {
+            padding: 20px;
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+        }
+        .package-header {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            border-bottom: 2px solid #e41616;
+            padding-bottom: 10px;
+        }
+        .expertise-level {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .price-range {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        .features-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .features-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #2980b9;
+        }
+        .recommended-badge {
+            background: #42e4bb;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
 <body>
     <div id="page-wrapper">
- <!-- Header -->
- <header id="header">
-    <h1>
-        <a href="index.html">
-            <img src="images/AI TRY.png" alt="Logo"
-                style="height: 50px; vertical-align: middle; margin-right: 10px;" />
-        </a>
-    </h1>
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li>
-                <a href="#" class="icon solid fa-angle-down">Learn More</a>
+        <!-- Header -->
+        <header id="header">
+            <h1>
+                <a href="index.html">
+                    <img src="images/AI TRY.png" alt="Logo" style="height: 50px; vertical-align: middle; margin-right: 10px;" />
+                </a>
+            </h1>
+            <nav id="nav">
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="pricingTable.html">Training Plans</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <!-- <li> -->
-                        <!-- <a href="pricingTable.html"> -->
-                            <!-- Pricing</a> -->
-                        <!-- <ul>
-                            <li><a href="#">✨ Spark</a></li>
-                            <li><a href="#">🧭 Pathfinder</a></li>
-                            <li><a href="#">🍃 Sage</a></li>
-                            <li><a href="#">🔥 Trailblazer</a></li>
-                        </ul> -->
-                    <!-- </li> -->
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#" class="icon solid fa-angle-down">Learn More</a>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="pricingTable.html">Training Plans</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="projects.html">Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="button">Contact Us</a></li>
                 </ul>
-            </li>
-            <li><a href="contact.html" class="button">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+            </nav>
+        </header>
 
-        <!-- Pricing Section -->
+        <!-- Main Pricing Section -->
         <section id="pricing" class="container">
             <header class="major">
-                <h2>Pricing Plans</h2>
-                <p>Choose a plan that best suits your needs. All plans are customizable and tailored to your
-                    requirements.</p>
+                <h2>AI Training & Implementation Packages</h2>
+                <p>Find the perfect combination of business size and expertise level for your needs</p>
             </header>
-            <div class="box">
-                <table class="pricing-table">
-                    <thead>
-                        <tr>
-                            <th>Features</th>
-                            <th>✨ Spark ($1600+)</th>
-                            <th>🧭 Pathfinder ($1100+)</th>
-                            <th>🍃 Sage ($600+)</th>
-                            <th>🔥 Trailblazer ($600+)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>QuickBooks Setup</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                        </tr>
-                        <tr>
-                            <td>Customized Chart of Accounts</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                        </tr>
-                        <tr>
-                            <td>General Ledger Maintenance</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                        </tr>
-                        <tr>
-                            <td>Monthly Account Reconciliations</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                            <td>✔</td>
-                        </tr>
-                        <tr>
-                            <td>Financial Reports</td>
-                            <td>Monthly</td>
-                            <td>Monthly</td>
-                            <td>Quarterly</td>
-                            <td>Monthly</td>
-                        </tr>
-                    </tbody>
-                </table>
+
+            <!-- Business Size Sections -->
+            <div class="business-size-section">
+                <h2>Small Business Solutions</h2>
+                <p>Perfect for businesses with 1-50 employees</p>
+                <div class="price-range">
+                    <span class="price">Investment Range: $1,500 - $3,000</span>
+                    <p>Choose from our expertise-based packages within this range:</p>
+                </div>
+                
+                <div class="package-cards">
+                    <div class="package-card">
+                        <div class="package-header">✨ Spark</div>
+                        <div class="expertise-level">Beginner-Friendly</div>
+                        <p>Perfect for those just starting their AI journey</p>
+                        <ul class="features-list">
+                            <li>Basic AI tool implementation</li>
+                            <li>Foundational training sessions</li>
+                            <li>Essential workflow integration</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">🧭 Pathfinder</div>
+                        <div class="expertise-level">Intermediate</div>
+                        <div class="recommended-badge">Most Popular</div>
+                        <ul class="features-list">
+                            <li>Advanced AI tool implementation</li>
+                            <li>Customized training programs</li>
+                            <li>Process optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="business-size-section">
+                <h2>Mid-Sized Business Solutions</h2>
+                <p>Ideal for businesses with 51-200 employees</p>
+                <div class="price-range">
+                    <span class="price">Investment Range: $3,000 - $6,000</span>
+                    <p>Scale your AI implementation with these packages:</p>
+                </div>
+                
+                <div class="package-cards">
+                    <div class="package-card">
+                        <div class="package-header">🍃 Sage</div>
+                        <div class="expertise-level">Expert Level</div>
+                        <div class="recommended-badge">Most Comprehensive</div>
+                        <ul class="features-list">
+                            <li>Full-scale AI integration</li>
+                            <li>Advanced automation workflows</li>
+                            <li>Custom AI solution development</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">🔥 Trailblazer</div>
+                        <div class="expertise-level">Entrepreneur Focus</div>
+                        <ul class="features-list">
+                            <li>Innovation-focused solutions</li>
+                            <li>Growth strategy integration</li>
+                            <li>Market expansion tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="business-size-section">
+                <h2>Enterprise Solutions</h2>
+                <p>Customized for businesses with 200+ employees</p>
+                <div class="price-range">
+                    <span class="price">Investment Range: $6,000+</span>
+                    <p>Enterprise-grade solutions with any expertise package</p>
+                </div>
+                
+                <p>All expertise packages (Spark, Pathfinder, Sage, and Trailblazer) are available at enterprise scale with:</p>
+                <ul class="features-list">
+                    <li>Department-specific customization</li>
+                    <li>Enterprise-wide integration</li>
+                    <li>Custom development solutions</li>
+                    <li>Dedicated support team</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="box special">
+                <h3>Not Sure Which Package Is Right for You?</h3>
+                <p>Book a free consultation to discuss your business needs and get personalized recommendations.</p>
+                <ul class="actions special">
+                    <li><a href="contact.html" class="button alt">Schedule Consultation</a></li>
+                </ul>
             </div>
         </section>
 
         <!-- Footer -->
         <footer id="footer">
             <ul class="icons">
-                <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
                 <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
             </ul>
             <p>© 2024 Nova AI Consulting. All rights reserved.</p>
         </footer>
     </div>
-    	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-</body>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

@@ -2656,10 +2656,50 @@
 
 /* Table */
 
-	.table-wrapper {
-		-webkit-overflow-scrolling: touch;
-		overflow-x: auto;
-	}
+.table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	margin-bottom: 1em;
+	border-radius: 6px;
+}
+.pricing-table {
+	min-width: 800px; /* Ensures table doesn't shrink too much */
+	width: 100%;
+	border-collapse: collapse;
+	margin: 0;
+}
+
+.pricing-table th,
+.pricing-table td {
+	padding: 1em;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	white-space: nowrap; /* Prevents text wrapping */
+}
+
+.pricing-table td:first-child {
+	text-align: left;
+	font-weight: bold;
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pricing-table th {
+	background-color: #f8f9fa;
+	font-weight: bold;
+}
+
+/* Add subtle shadow to indicate scrollability */
+.table-wrapper::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 30px;
+	pointer-events: none;
+	background: linear-gradient(to right, transparent, rgba(0,0,0,0.05));
+}
 
 	table {
 		margin: 0 0 2em 0;
@@ -4163,4 +4203,43 @@ ul li {
 
 #nav ul li a:hover {
 	color: #09ad21; /* Blue hover effect */
+}
+/* Survey Form Styles */
+.survey-form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.survey-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.survey-form input,
+.survey-form select,
+.survey-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.survey-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.survey-form button:hover {
+    background-color: #0056b3;
 }
